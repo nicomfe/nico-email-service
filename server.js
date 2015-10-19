@@ -19,6 +19,6 @@ app.use(bodyParser.urlencoded({
 // routes
 require('./app/scripts/routes.js')(app, config);
 
-var server = app.listen(config.port);
+var server = app.listen(config.port,config.ip);
 var date = new Date();
-console.log(date+ ' - Server running at http://127.0.0.1:' + config.port);
+console.log(date+ ' - Server running at ' + config.ip + ':' +config.port);
